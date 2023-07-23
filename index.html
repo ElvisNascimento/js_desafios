@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Desafios</title>
+    <title>Desafio JS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    
+    <h1>Desafio de questões com javascript.</h1>
+    <div class="questoes-container">
+        <button class="button_Voltar" onclick="anteriorQuestao()">Voltar</button>
+        <!-- inicio das questões -->
+        <div class="questao" id="questao1">
+            <div class="pergunta">
+                <h2>1. Escreva uma função que lê um nº inteiro de um campo e mostre uma mensagem indicando se este número é par ou ímpar.</h2>
+                <label for="n_inteiro_questao1">Digite um número inteiro aqui:</label>
+                <input type="number" name="" id="n_inteiro_questao1">
+                <button onclick="parOuImpar('n_inteiro_questao1', 'resultado1')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 class="resultado" id="resultado1"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="questao" id="questao2">
+            <div class="pergunta">
+                <h3>2. Escreva uma função que lê dois nº inteiros diferentes e mostre uma mensagem indicando qual é o maior.</h3>
+                <div><label for="n1_inteiro_questao2">Digite o primeiro numero aqui:</label>
+                    <input type="number" name="" id="n1_inteiro_questao2">
+                </div>
+                <div><label for="n2_inteiro_questao2">Digite o segundo numero aqui:</label>
+                    <input type="number" name="" id="n2_inteiro_questao2">
+                </div>
+                <button onclick="numeroMaior('n1_inteiro_questao2','n2_inteiro_questao2', 'resultado2')">Resolver</button>
+                <div class="resposta">
+                    <h3>A resposta é</h3>
+                    <h4 id="resultado2"></h4>
+                </div>
+            </div>
+        </div>
+        <!-- final das questões -->
+        <button class="button_Proximo" onclick="proximaQuestao()">Próximo</button>
+    </div>
+    <script src="/main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
