@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Desafio de questões com javascript.</h1>
+    <br>
     <div class="questoes-container">
         <button class="button_Voltar" onclick="anteriorQuestao()">Voltar</button>
         <!-- inicio das questões -->
@@ -24,9 +25,10 @@
                 </div>
             </div>
         </div>
+        
         <div class="questao" id="questao2">
             <div class="pergunta">
-                <h3>2. Escreva uma função que lê dois nº inteiros diferentes e mostre uma mensagem indicando qual é o maior.</h3>
+                <h2>2. Escreva uma função que lê dois nº inteiros diferentes e mostre uma mensagem indicando qual é o maior.</h2>
                 <div><label for="n1_inteiro_questao2">Digite o primeiro numero aqui:</label>
                     <input type="number" name="" id="n1_inteiro_questao2">
                 </div>
@@ -35,8 +37,39 @@
                 </div>
                 <button onclick="numeroMaior('n1_inteiro_questao2','n2_inteiro_questao2', 'resultado2')">Resolver</button>
                 <div class="resposta">
-                    <h3>A resposta é</h3>
+                    <h2>A resposta é</h2>
                     <h4 id="resultado2"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="questao" id="questao3">
+            <div class="pergunta">
+                <h2>3. Escreva uma função que lê o ano de nascimento de uma pessoa. Mostre uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu).</h2>
+                <div><label for="data_nascimento">Digite o ano em que ele nasceu aqui:</label>
+                    <input type="number" name="" id="data_nascimento">
+                </div>
+                <button onclick="votaOuNaoVota('data_nascimento', 'resultado3')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 id="resultado3"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="questao" id="questao4">
+            <div class="pergunta">
+                <h2>4. Escreva uma função para ler o salário mensal atual de um funcionário e o percentual de reajuste. Mostre uma mensagem indicando o valor do novo salário.</h2>
+                <div><label for="valor_salario">Digite o salario atual aqui: R$</label>
+                    <input type="number" name="" id="valor_salario">
+                </div>
+                <div><label for="porcentagem">Digite o percentual a ser reajustado aqui:</label>
+                    <input type="number" name="" id="porcentagem"><span>%</span>
+                </div>
+                <button onclick="reajusteSalarial('valor_salario','porcentagem', 'resultado4')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 id="resultado4"></h4>
                 </div>
             </div>
         </div>

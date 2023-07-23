@@ -35,17 +35,17 @@ input{
 }
 .button_Proximo{
     background-color: rgb(14, 127, 14);
-    width: 10%;
-    height: auto;
 }
 .button_Voltar{
     background-color: rgb(189, 59, 29);
-    width: 10%;
-    height: auto;
+}
+.button_Proximo, .button_Voltar{
+    width: 15%;
+    height: 100%;
 }
 .questao{
     width: 80%;
-    height: 400px;
+    height: auto;
     border: 1px solid black;
 }
 .pergunta, .resposta{
@@ -53,9 +53,11 @@ input{
 }
 .pergunta{
     color: blue;
+    margin: 20px;
 }
 .resposta, label{
     color: cadetblue;
+    margin-bottom: 20px;
 }
 .resultado{
     margin: auto;
