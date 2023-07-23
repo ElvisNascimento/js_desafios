@@ -22,13 +22,14 @@ function anteriorQuestao() {
     exibirQuestao(questaoAtual);
   }
 }
+
 // Exibir a primeira questão inicialmente
 exibirQuestao(questaoAtual);
 
 //resolucao da 1° pergunta
-function parOuImpar(idInput, idResultado) {
-  const numero = parseInt(document.getElementById(idInput).value);
-  const resultadoElement = document.getElementById(idResultado);
+function parOuImpar(idInput, idResult) {
+  let numero = parseInt(document.getElementById(idInput).value);
+  let resultadoElement = document.getElementById(idResult);
 
   if (!isNaN(numero)) {
     if (numero % 2 === 0) {
@@ -43,10 +44,10 @@ function parOuImpar(idInput, idResultado) {
 
 //resolucao da 2° pergunta
 
-function numeroMaior(idInput1, idInput2, idResultado) {
-  const numero1 = parseInt(document.getElementById(idInput1).value);
-  const numero2 = parseInt(document.getElementById(idInput2).value);
-  const resultadoElement = document.getElementById(idResultado);
+function numeroMaior(idInput1, idInput2, idResult) {
+  let numero1 = parseInt(document.getElementById(idInput1).value);
+  let numero2 = parseInt(document.getElementById(idInput2).value);
+  let resultadoElement = document.getElementById(idResult);
   if (!isNaN(numero1) && !isNaN(numero2)) {
     if (numero1 === numero2) {
       resultadoElement.textContent = 'Os números são iguais!';
@@ -60,9 +61,9 @@ function numeroMaior(idInput1, idInput2, idResultado) {
 
 // resolucao da 3° pergunta
 
-function votaOuNaoVota(idInput1, idResultado) {
+function votaOuNaoVota(idInput1, idResult) {
   let ano_Nascimento = parseInt(document.getElementById(idInput1).value);
-  const resultadoElement = document.getElementById(idResultado);
+  const resultadoElement = document.getElementById(idResult);
   let ano_Atual = 2023;
   let idade = ano_Atual - ano_Nascimento;
 
@@ -79,10 +80,10 @@ function votaOuNaoVota(idInput1, idResultado) {
 
 //resolucao da 4° pergunta
 
-function reajusteSalarial(idInput1, idInput2, idResultado) {
-  const salario_Atual = parseInt(document.getElementById(idInput1).value);
+function reajusteSalarial(idInput1, idInput2, idResult) {
+  let salario_Atual = parseInt(document.getElementById(idInput1).value);
   const porcentagem = parseInt(document.getElementById(idInput2).value);
-  const resultadoElement = document.getElementById(idResultado);
+  let resultadoElement = document.getElementById(idResult);
   if (!isNaN(salario_Atual) && !isNaN(porcentagem)) {
     if (porcentagem > 0) {
       resultadoElement.textContent = 'O reajuste é de R$'+(salario_Atual+ (porcentagem/100)*salario_Atual);
@@ -92,5 +93,26 @@ function reajusteSalarial(idInput1, idInput2, idResultado) {
   }
   else {
     resultadoElement.textContent = 'Digite números válidos.';
+  }
+}
+
+function diaDaSemana(idInput,idResult)
+{
+  let dias = ['domingo',
+  'segunda-feira',
+  'terça-feira',
+  'quarta-feira',
+  'quinta-feira',
+  'sexta-feira',
+  'sabado'];
+  let dia_selecionado = parseInt(document.getElementById(idInput).value);
+  let resultadoElement = document.getElementById(idResult);
+
+
+  if(dia_selecionado > 0 && dia_selecionado <= 7)
+  {
+    resultadoElement.textContent = 'O dia escolhido é :'+ dias[dia_selecionado-1];
+  }else{
+    resultadoElement.textContent = 'O dia escolhido não existe';
   }
 }

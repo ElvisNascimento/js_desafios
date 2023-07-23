@@ -17,8 +17,8 @@
             <div class="pergunta">
                 <h2>1. Escreva uma função que lê um nº inteiro de um campo e mostre uma mensagem indicando se este número é par ou ímpar.</h2>
                 <label for="n_inteiro_questao1">Digite um número inteiro aqui:</label>
-                <input type="number" name="" id="n_inteiro_questao1">
-                <button onclick="parOuImpar('n_inteiro_questao1', 'resultado1')">Resolver</button>
+                <input type="number"  id="n_inteiro_questao1">
+                <button class="button_resolva" onclick="parOuImpar('n_inteiro_questao1', 'resultado1')">Resolver</button>
                 <div class="resposta">
                     <h2>A resposta é</h2>
                     <h4 class="resultado" id="resultado1"></h4>
@@ -30,12 +30,12 @@
             <div class="pergunta">
                 <h2>2. Escreva uma função que lê dois nº inteiros diferentes e mostre uma mensagem indicando qual é o maior.</h2>
                 <div><label for="n1_inteiro_questao2">Digite o primeiro numero aqui:</label>
-                    <input type="number" name="" id="n1_inteiro_questao2">
+                    <input type="number"  id="n1_inteiro_questao2">
                 </div>
                 <div><label for="n2_inteiro_questao2">Digite o segundo numero aqui:</label>
-                    <input type="number" name="" id="n2_inteiro_questao2">
+                    <input type="number"  id="n2_inteiro_questao2">
                 </div>
-                <button onclick="numeroMaior('n1_inteiro_questao2','n2_inteiro_questao2', 'resultado2')">Resolver</button>
+                <button class="button_resolva" onclick="numeroMaior('n1_inteiro_questao2','n2_inteiro_questao2', 'resultado2')">Resolver</button>
                 <div class="resposta">
                     <h2>A resposta é</h2>
                     <h4 id="resultado2"></h4>
@@ -47,29 +47,42 @@
             <div class="pergunta">
                 <h2>3. Escreva uma função que lê o ano de nascimento de uma pessoa. Mostre uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu).</h2>
                 <div><label for="data_nascimento">Digite o ano em que ele nasceu aqui:</label>
-                    <input type="number" name="" id="data_nascimento">
+                    <input type="number"  id="data_nascimento">
                 </div>
-                <button onclick="votaOuNaoVota('data_nascimento', 'resultado3')">Resolver</button>
+                <button class="button_resolva" onclick="votaOuNaoVota('data_nascimento', 'resultado3')">Resolver</button>
                 <div class="resposta">
                     <h2>A resposta é</h2>
                     <h4 id="resultado3"></h4>
                 </div>
             </div>
         </div>
-
+        
         <div class="questao" id="questao4">
             <div class="pergunta">
                 <h2>4. Escreva uma função para ler o salário mensal atual de um funcionário e o percentual de reajuste. Mostre uma mensagem indicando o valor do novo salário.</h2>
                 <div><label for="valor_salario">Digite o salario atual aqui: R$</label>
-                    <input type="number" name="" id="valor_salario">
+                    <input type="number"  id="valor_salario">
                 </div>
                 <div><label for="porcentagem">Digite o percentual a ser reajustado aqui:</label>
-                    <input type="number" name="" id="porcentagem"><span>%</span>
+                    <input type="number"  id="porcentagem"><span>%</span>
                 </div>
-                <button onclick="reajusteSalarial('valor_salario','porcentagem', 'resultado4')">Resolver</button>
+                <button class="button_resolva" onclick="reajusteSalarial('valor_salario','porcentagem', 'resultado4')">Resolver</button>
                 <div class="resposta">
                     <h2>A resposta é</h2>
                     <h4 id="resultado4"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="questao" id="questao5">
+            <div class="pergunta">
+                <h2>5. Escreva uma função que leia um número inteiro de 1 a 7 e informe o dia da semana correspondente, sendo domingo o dia de número 1. Se o número não corresponder a um dia da semana, mostre uma mensagem de erro.</h2>
+                <div><label for="dia">Digite o dia da semana aqui:</label>
+                    <input type="number" id="dia">
+                </div>
+                <button class="button_resolva" onclick="diaDaSemana('dia', 'resultado5')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 id="resultado5"></h4>
                 </div>
             </div>
         </div>

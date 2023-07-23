@@ -8,12 +8,16 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: auto;
+    margin: auto;   
     width: 100%;
-    height: 400px;
+    height: 100vh;
     line-height: 40px;
     min-width: 400px;
     max-width: 800px;
+    background: linear-gradient(#777,#fff);
+}
+h1{
+    margin-top:2%;
 }
 input{
     border: 1px solid black;
@@ -27,6 +31,7 @@ input{
     align-items: center;
 }
 .questao {
+    background:linear-gradient(#fff,rgba(91, 91, 91, 0.658));
     display: none;
 }
 
@@ -34,17 +39,27 @@ input{
     display: block;
 }
 .button_Proximo{
-    background-color: rgb(14, 127, 14);
+    background:linear-gradient(#fff,rgba(0, 81, 255, 0.658));
 }
 .button_Voltar{
-    background-color: rgb(189, 59, 29);
+    background:linear-gradient(#fff,rgba(255, 0, 0, 0.658));
+}
+.button_resolva{
+    border-radius: 30px;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background:linear-gradient(#fff,rgba(0, 184, 6, 0.658));
 }
 .button_Proximo, .button_Voltar{
-    width: 15%;
-    height: 100%;
+    border-radius: 30px;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
 }
 .questao{
-    width: 80%;
+    border-radius: 30px;
+    width: 70%;
     height: auto;
     border: 1px solid black;
 }
@@ -53,15 +68,13 @@ input{
 }
 .pergunta{
     color: blue;
-    margin: 20px;
+    margin: 5%;
 }
 .resposta, label{
-    color: cadetblue;
+    color: rgb(21, 9, 65);
     margin-bottom: 20px;
 }
-.resultado{
-    margin: auto;
-    border: 1px solid black;
-    width: 30%;
-    height: 50px;
+.resposta{
+    background-color: #ffffff;
+    border-radius: 30px;
 }
