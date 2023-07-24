@@ -95,7 +95,7 @@ function reajusteSalarial(idInput1, idInput2, idResult) {
     resultadoElement.textContent = 'Digite números válidos.';
   }
 }
-
+//resolucao da 5°
 function diaDaSemana(idInput,idResult)
 {
   let dias = ['domingo',
@@ -115,4 +115,84 @@ function diaDaSemana(idInput,idResult)
   }else{
     resultadoElement.textContent = 'O dia escolhido não existe';
   }
+}
+//resolucao da 6°
+function loopAteNumero(idInput,idResult) 
+{
+  let numero = parseInt(document.getElementById(idInput).value);
+  let resultadoElement = document.getElementById(idResult);
+  let numeros = Array();
+  if(numero > 0)
+  {
+    for(let i = 0;i <= numero; i++)
+    {
+      numeros.push(i)
+      resultadoElement.textContent = numeros;
+    }
+
+  }else{
+    resultadoElement.textContent = 'O numero deve ser um inteiro POSITIVO!';
+  }
+}
+//resolucao da 7°
+function somaAteNumero(idInput,idResult) 
+{
+  let numero = parseInt(document.getElementById(idInput).value);
+  let resultadoElement = document.getElementById(idResult);
+  let numeros = Array();
+  let soma = 0;
+  if(numero > 0)
+  {
+    for(let i = 0;i < numero; i++)
+    {
+      soma = soma + i;
+      numeros.push(i)
+      resultadoElement.textContent = numeros+ ' = ' + soma;
+    }
+
+  }else{
+    resultadoElement.textContent = 'O numero deve ser um inteiro POSITIVO!';
+  }
+}
+//resolucao da 8°
+function imparesAteNumero(idInput,idResult) 
+{
+  let numero = parseInt(document.getElementById(idInput).value);
+  let resultadoElement = document.getElementById(idResult);
+  let numeros = Array();
+  if(numero > 0)
+  { 
+    for(let i = 0; i <= numero ; i++)
+    {
+      if(!(i%2 === 0))
+      {
+        numeros.push(i)
+        resultadoElement.textContent = 'Os Impares sao esses ate o numero =' + numeros;
+      }
+    }
+  }else{
+    resultadoElement.textContent = 'O numero deve ser um inteiro POSITIVO!';
+  }
+}
+//resolucao da 9°
+function somaDosMenoresQ30(idInput,idResult) 
+{
+  let listaString = document.getElementById(idInput).value;
+  let resultadoElement = document.getElementById(idResult);
+  if(/^[0-9]+(-[0-9]+){4}$/.test(listaString))
+  {
+    let listaNumeros = listaString.split('-').map(Number);
+
+    let listaMenoresQ30 = listaNumeros.filter(num=>num<30);
+  
+    let soma = listaMenoresQ30.reduce((acc,num)=>acc+num,0);
+
+    resultadoElement.textContent = 'a soma dos numeros menores que 30 é = '+ soma;
+
+  }else
+  {
+    resultadoElement.textContent = 'A Lista deve conter apernas Numeros separados por um "-"!';
+  }
+
+  
 }

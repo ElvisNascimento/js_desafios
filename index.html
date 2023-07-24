@@ -86,6 +86,63 @@
                 </div>
             </div>
         </div>
+
+        <div class="questao" id="questao6">
+            <div class="pergunta">
+                <h2>6. Escreva uma função que recebe um número inteiro positivo, e mostre na tela todos os números até chegar ao seu valor.</h2>
+                <div><label for="numero6">Digite um numero inteiro positivo aqui:</label>
+                    <input type="number" id="numero6">
+                </div>
+                <button class="button_resolva" onclick="loopAteNumero('numero6', 'resultado6')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 id="resultado6"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="questao" id="questao7">
+            <div class="pergunta">
+                <h2>7. Escreva uma função que recebe um número inteiro positivo, e exiba mostre soma de todos os números menores que ele</h2>
+                <div><label for="numero7">Digite um numero inteiro positivo aqui:</label>
+                    <input type="number" id="numero7">
+                </div>
+                <button class="button_resolva" onclick="somaAteNumero('numero7', 'resultado7')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 id="resultado7"></h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="questao" id="questao8">
+            <div class="pergunta">
+                <h2>8. Escreva uma função que recebe um número inteiro positivo, e mostre todos os números ímpares até chegar ao seu valor.</h2>
+                <div><label for="numero8">Digite um numero inteiro positivo aqui:</label>
+                    <input type="number" id="numero8">
+                </div>
+                <button class="button_resolva" onclick="imparesAteNumero('numero8', 'resultado8')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 id="resultado8"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="questao" id="questao9">
+            <div class="pergunta">
+                <h2>9. Escreva uma função que recebe um lista de 5 números inteiros em forma de string separada por “-”, converta para array e mostre a soma de todos os números que são menores que 30.</h2>
+                <div>
+                    <label for="lsitaNumeros">Digite 5 numeros inteiros separando eles por um - aqui:</label>
+                    <input type="text" id="listaNumeros" placeholder="10-20-30-40-50">
+                </div>
+                <button class="button_resolva" onclick="somaDosMenoresQ30('listaNumeros', 'resultado9')">Resolver</button>
+                <div class="resposta">
+                    <h2>A resposta é</h2>
+                    <h4 id="resultado9"></h4>
+                </div>
+            </div>
+        </div>
         <!-- final das questões -->
         <button class="button_Proximo" onclick="proximaQuestao()">Próximo</button>
     </div>

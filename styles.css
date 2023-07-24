@@ -75,6 +75,10 @@ input{
     margin-bottom: 20px;
 }
 .resposta{
+    word-wrap: break-word;
+    margin: auto;
+    max-width: 800px;
+    height: auto;
     background-color: #ffffff;
     border-radius: 30px;
 }
