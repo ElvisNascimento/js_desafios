@@ -179,20 +179,20 @@ function somaDosMenoresQ30(idInput,idResult)
 {
   let listaString = document.getElementById(idInput).value;
   let resultadoElement = document.getElementById(idResult);
+  //verificar se o usuario digitou apenas numeros
   if(/^[0-9]+(-[0-9]+){4}$/.test(listaString))
   {
+    //separar pela "-" e converter o resultado em um array do tipo number
     let listaNumeros = listaString.split('-').map(Number);
-
+    //filtrar de acordo com os numeros que sao menores que 30
     let listaMenoresQ30 = listaNumeros.filter(num=>num<30);
-  
+    //somar todos os numeros dentro do array que so tem numeros menores que 30
     let soma = listaMenoresQ30.reduce((acc,num)=>acc+num,0);
 
     resultadoElement.textContent = 'a soma dos numeros menores que 30 é = '+ soma;
-
+    
   }else
   {
     resultadoElement.textContent = 'A Lista deve conter apernas Numeros separados por um "-"!';
   }
-
-  
 }
