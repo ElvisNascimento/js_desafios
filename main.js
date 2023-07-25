@@ -14,11 +14,21 @@ function proximaQuestao() {
     questaoAtual++;
     exibirQuestao(questaoAtual);
   }
+  if(questaoAtual > totalQuestoes)
+  {
+    questaoAtual = 1;
+    exibirQuestao(questaoAtual);
+  }
 }
 
 function anteriorQuestao() {
   if (questaoAtual > 1) {
     questaoAtual--;
+    exibirQuestao(questaoAtual);
+  }
+  if(questaoAtual < totalQuestoes)
+  {
+    questaoAtual = 12;
     exibirQuestao(questaoAtual);
   }
 }
@@ -195,4 +205,24 @@ function somaDosMenoresQ30(idInput,idResult)
   {
     resultadoElement.textContent = 'A Lista deve conter apernas Numeros separados por um "-"!';
   }
+}
+//resolucao da 10°
+function valoresMaioresQ50(idInput,idResult) 
+{
+  let listaString = document.getElementById(idInput).value;
+  let resultadoElement = document.getElementById(idResult);
+ //Separar os números da string
+ const listaNumerosString = listaString.split('/');
+
+ //Converter os números para inteiros e filtrar apenas valores válidos
+ const listaNumeros = listaNumerosString.map(numeroString => {
+   const numero = parseInt(numeroString, 10);
+   return isNaN(numero) ? 0 : numero; // Substituir valores inválidos por 0
+ });
+ console.log(listaNumeros);
+ 
+ //Contar quantos valores são maiores que 50
+ const quantidadeMaioresQue50 = listaNumeros.filter(numero => numero > 50);
+  
+ resultadoElement.textContent = 'A quantidade de numeros maiores que 50 é : '+ quantidadeMaioresQue50.length;
 }

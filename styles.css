@@ -67,11 +67,11 @@ input{
     text-align: center;
 }
 .pergunta{
-    color: blue;
+    color: rgb(26, 26, 26);
     margin: 5%;
 }
 .resposta, label{
-    color: rgb(21, 9, 65);
+    color: rgb(6, 6, 6);
     margin-bottom: 20px;
 }
 .resposta{
