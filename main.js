@@ -10,27 +10,22 @@ function exibirQuestao(numeroQuestao) {
 }
 
 function proximaQuestao() {
-  if (questaoAtual < totalQuestoes) {
-    questaoAtual++;
-    exibirQuestao(questaoAtual);
-  }
-  if(questaoAtual > totalQuestoes)
+  if(questaoAtual >= totalQuestoes)
   {
     questaoAtual = 1;
-    exibirQuestao(questaoAtual);
+  }else{
+    questaoAtual++;
   }
+  exibirQuestao(questaoAtual);
 }
 
 function anteriorQuestao() {
   if (questaoAtual > 1) {
     questaoAtual--;
-    exibirQuestao(questaoAtual);
-  }
-  if(questaoAtual < totalQuestoes)
-  {
+  }else{
     questaoAtual = 12;
-    exibirQuestao(questaoAtual);
   }
+  exibirQuestao(questaoAtual);
 }
 
 // Exibir a primeira questão inicialmente
@@ -225,4 +220,19 @@ function valoresMaioresQ50(idInput,idResult)
  const quantidadeMaioresQue50 = listaNumeros.filter(numero => numero > 50);
   
  resultadoElement.textContent = 'A quantidade de numeros maiores que 50 é : '+ quantidadeMaioresQue50.length;
+}
+
+//resolucao da 11°
+function valorInvertido(idInput,idResult) 
+{
+  let valorRecebido = document.getElementById(idInput).value;
+  let resultadoElement = document.getElementById(idResult);
+  let valorInverso = [];
+  
+  for(let i = valorRecebido.length -1; i > -1; i--)
+  {
+    valorInverso.push(valorRecebido[i]);
+  }
+
+ resultadoElement.textContent = 'O Inverso do que foi digitado é : ' + valorInverso;
 }
