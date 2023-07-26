@@ -236,3 +236,14 @@ function valorInvertido(idInput,idResult)
 
  resultadoElement.textContent = 'O Inverso do que foi digitado é : ' + valorInverso;
 }
+//resolucao da 12°
+function primeiraUltimaMaiuscula(idInput,idResult) 
+{
+  let stringRecebido = document.getElementById(idInput).value;
+  let resultadoElement = document.getElementById(idResult);
+  let primeiraLetra = stringRecebido[0].toUpperCase();
+  let ultimaLetra = stringRecebido[stringRecebido.length-1].toUpperCase();
+  let stringAlterada = primeiraLetra + stringRecebido.slice(1,-1) + ultimaLetra;
+
+ resultadoElement.textContent = 'String alterada para : ' + stringAlterada;
+}
